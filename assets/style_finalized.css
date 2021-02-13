@@ -1,0 +1,182 @@
+/* Banner Animation */
+.animated_banner {
+  	font: 700 4em/1 , sans-serif;
+  	letter-spacing: 0;
+
+    display: block;
+    margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+  	margin: 10px;
+  	font-size: 3rem;
+
+/* Clip Background Image */
+    background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+/* Animate Background Image */
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+
+}
+
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+h1.underline--magical u{
+  background-image: linear-gradient(
+    120deg,
+    blue 0%,
+    green 50%,
+    aqua 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 99%;
+  transition: background-size 0.25s ease-in;
+}
+h1.underline--magical u:hover{
+    background-size: 100% 88%;
+
+}
+
+.topbar{
+    background: #252525;
+    z-index: 999;
+    width: 100%;
+}
+
+.main_layout{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 100px;
+    margin-left: 290px;
+    padding-right: 280px;
+    overflow: scroll;
+    font-size: 30px;
+    color: blue;
+}
+
+.project_banner{
+    font-size: 3rem;
+    color: white;
+}
+
+
+
+/* Correct place holder location in dropdown boxes */
+.Select-placeholder{
+    top: auto;
+}
+
+.sidenav {
+  height: 100%;
+  width: 280px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 81px;
+
+  /*
+  383d41
+  */
+  background: #252525;
+}
+
+.nav_link{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+
+    display: block;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+a.nav_link:hover{
+    background: GhostWhite;
+    color: red;
+
+}
+
+.nav_sublink{
+    font-size: 1rem;
+    font-weight: 100;
+    color: GhostWhite;
+
+    display: block;
+    padding-left: 25px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+a.nav_sublink:hover{
+    background: GhostWhite;
+    color: blue;
+    font-weight: 500;
+}
+
+.footerStatic{
+    bottom: 0;
+    position: fixed;
+}
+
+
+div.project_title {
+  display:inline-block;
+  overflow:hidden;
+
+  font-size: 2rem;
+    color: beige;
+    font-family: calibri;
+}
+
+
+
+div.project_title:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+div.project_title:last-of-type h1 {
+  margin-left:-400px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:800px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:800px;}
+}
